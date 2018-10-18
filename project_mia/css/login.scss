@@ -1,0 +1,32 @@
+@charset "utf-8" ;
+*{
+    margin: 0;padding: 0;
+}
+img{
+    display: block;
+}
+
+.login{
+    width: 965px;height: 630px;margin: 20px auto;padding-top:75px;
+    .login_left{
+        width: 622px;float: left;
+    }
+    .login_right{
+        width:333px;float: left;padding-left: 10px;padding-top: 20px;
+        p{
+            float: left;line-height: 20px;
+        }
+        .information{
+            margin-top: 40px;
+           .kk{
+               width: 305px;height: 40px;margin-bottom: 20px;font-size: 20px;
+           } 
+           .btn{
+               width: 285px;height: 40px;background: #f450a2;border: 0;border-radius: 5px;font-size: 20px;color: #ffffff;letter-spacing: 10px;margin-left: 11px;cursor: pointer;
+           }
+           span{
+               display: block;text-align: right;margin-right: 25px;font-size: 12px;margin-bottom: 16px;
+           }
+        }
+    }
+}

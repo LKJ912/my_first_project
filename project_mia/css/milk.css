@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.top {
+  width: 100%;
+  height: 30px;
+  background: #f2f2f2;
+  font-size: 12px;
+  color: #666666;
+  line-height: 30px;
+}
+.top .top_right {
+  float: right;
+  margin-right: 115px;
+}
+.top .top_right ul li {
+  float: left;
+  margin: 0 15px;
+  display: block;
+}
+.top .top_right ul li a {
+  color: #222222;
+  text-decoration: none;
+}
+.top .top_right .h {
+  cursor: pointer;
+}
+
+.mlogo {
+  width: 100%;
+  height: 130px;
+}
+.mlogo .img1 {
+  float: left;
+  margin-left: 115px;
+  margin-top: 30px;
+}
+.mlogo .ts {
+  width: 490px;
+  height: 40px;
+  float: left;
+  margin-left: 295px;
+  margin-top: 50px;
+}
+.mlogo .ts .txt {
+  width: 390px;
+  height: 30px;
+  border: solid 2px #fa4a98;
+  float: left;
+  outline: none;
+}
+.mlogo .ts .sub {
+  width: 90px;
+  height: 30px;
+  float: left;
+  border: 2px solid #fa4a98;
+  text-align: center;
+  line-height: 30px;
+  color: #fff3e3;
+  background: #fa4488;
+  cursor: pointer;
+}
+.mlogo .mlogo_r {
+  float: right;
+  margin-right: 80px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.mlogo .mlogo_r img {
+  float: left;
+}
+.mlogo .mlogo_r p {
+  display: block;
+  float: left;
+  width: 105px;
+  height: 32px;
+  border: 1px solid #e5e5e5;
+  border-left: 0px;
+  font-size: 12px;
+  color: #4f4f4f;
+  text-align: center;
+  line-height: 32px;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background: #ff3893;
+}
+.nav .classify ul {
+  display: block;
+  margin-left: 367px;
+}
+.nav .classify ul li {
+  display: block;
+  width: 100px;
+  height: 50px;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.nav .classify ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.nav_bar {
+  position: absolute;
+  left: 115px;
+  top: 157px;
+  z-index: 99;
+}
+.nav_bar .select {
+  width: 230px;
+  height: 56px;
+  background: #fc3c96;
+  float: left;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 56px;
+  padding-left: 22px;
+  cursor: pointer;
+}
+.nav_bar .bar_left {
+  width: 240px;
+  height: 611px;
+  background: white;
+  padding-left: 12px;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  display: none;
+}
+.nav_bar .bar_left dl {
+  width: 196px;
+  height: 70px;
+  border-bottom: dashed 2px #d1d1d1;
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+.nav_bar .bar_left .q {
+  border-bottom: none;
+}
+.nav_bar .bar_left dt {
+  font-size: 13px;
+  color: #fb60ba;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.nav_bar .bar_left dd {
+  font-size: 11px;
+  color: #666666;
+  float: left;
+  line-height: 23px;
+  margin-right: 7px;
+}
+.nav_bar .bar_right {
+  width: 590px;
+  height: 606px;
+  background: white;
+  position: absolute;
+  top: 5px;
+  left: 230px;
+  display: none;
+}
+.nav_bar .bar_right .ll {
+  width: 210px;
+  height: 611px;
+  float: left;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+.nav_bar .bar_right .ll div {
+  margin-top: 20px;
+}
+.nav_bar .bar_right .rr {
+  width: 210px;
+  height: 611px;
+  float: left;
+  padding-left: 50px;
+}
+.nav_bar .bar_right .rr div {
+  margin-top: 20px;
+}
+.nav_bar .bar_right h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.nav_bar .bar_right ul {
+  margin-top: 10px;
+}
+.nav_bar .bar_right ul li {
+  font-size: 12px;
+  color: #666666;
+  display: block;
+  line-height: 20px;
+}
+
+.bigimg img {
+  width: 100%;
+  height: 400px;
+}
+.bigimg .smallimg {
+  width: 256px;
+  height: 400px;
+  position: absolute;
+  left: 920px;
+  top: 210px;
+  z-index: 999999;
+}
+.bigimg .smallimg img {
+  width: 256px;
+  height: 200px;
+}
+
+.scroll_right {
+  width: 43px;
+  height: 215px;
+  position: fixed;
+  bottom: 135px;
+  right: 5px;
+  font-size: 12px;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+  background: #ffffff;
+  display: none;
+}
+.scroll_right ul li {
+  display: block;
+  text-align: -webkit-center;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.scroll_right ul .b {
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.brand {
+  width: 1000px;
+  height: 125px;
+  background: pink;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 15px;
+  background: #ffffff;
+  margin-bottom: 25px;
+}
+.brand .brand_l {
+  width: 134px;
+  height: 75px;
+  float: left;
+  text-align: center;
+}
+.brand li {
+  float: left;
+}
+.brand li img {
+  width: 110px;
+  height: 55px;
+}
+
+#stairs {
+  width: 80px;
+  height: 400px;
+  background: whitesmoke;
+  position: fixed;
+  left: 20px;
+  top: 100px;
+  display: none;
+  cursor: pointer;
+  border: 1px solid #204D74;
+  border-bottom: 0;
+}
+#stairs li {
+  font-size: 13px;
+  color: #444444;
+  font-weight: 600;
+  display: block;
+  width: 80px;
+  height: 79px;
+  text-align: center;
+  line-height: 79px;
+  border-bottom: 1px solid #204D74;
+  letter-spacing: 2px;
+}
+#stairs li.active {
+  display: block;
+  background: white;
+  color: #E4B9B9;
+  background: #A94442;
+}
+
+.details {
+  width: 100%;
+}
+.details span {
+  width: 1106px;
+  height: 80px;
+  line-height: 25px;
+  font-size: 20px;
+  text-indent: 175px;
+}
+.details #deguo, .details #helan, .details #aierlan, .details #yingguo, .details #deguomm {
+  height: 368px;
+  display: block;
+  text-align: center;
+  margin-left: 240px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.details #deguo li, .details #helan li, .details #aierlan li, .details #yingguo li, .details #deguomm li {
+  float: left;
+  width: 248px;
+  height: 368px;
+}
+.details #deguo li img, .details #helan li img, .details #aierlan li img, .details #yingguo li img, .details #deguomm li img {
+  width: 248px;
+  height: 228px;
+}
+.details #deguo li .cname, .details #helan li .cname, .details #aierlan li .cname, .details #yingguo li .cname, .details #deguomm li .cname {
+  font-size: 14px;
+  font-weight: bold;
+  text-indent: 15px;
+  padding-top: 10px;
+  text-align: center;
+}
+.details #deguo li .cprice, .details #helan li .cprice, .details #aierlan li .cprice, .details #yingguo li .cprice, .details #deguomm li .cprice {
+  font-size: 18px;
+  color: #ff4a49;
+  text-indent: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.details #deguo li .cprice button, .details #helan li .cprice button, .details #aierlan li .cprice button, .details #yingguo li .cprice button, .details #deguomm li .cprice button {
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  background: #ff4a49;
+  font-size: 16px;
+  color: #fffff3;
+  border: 0;
+  margin-left: 12px;
+}
+.details #deguo li p, .details #helan li p, .details #aierlan li p, .details #yingguo li p, .details #deguomm li p {
+  border-right: 1px solid #e5e5e5;
+}
+
+.base .base_cen {
+  overflow: hidden;
+  width: 100%;
+  height: 580px;
+  border-top: 2px solid #e5e5e5;
+}
+.base .base_cen .cen_one {
+  width: 1100px;
+  height: 138px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 23px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.base .base_cen .cen_one li {
+  float: left;
+  margin-left: 65px;
+  margin-right: 50px;
+  text-align: center;
+}
+.base .base_cen .cen_one li h3 {
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 25px;
+}
+.base .base_cen .cen_one li p {
+  font-size: 12px;
+  color: #999999;
+}
+.base .base_cen .cen_two {
+  width: 1100px;
+  height: 186px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 23px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.base .base_cen .cen_two dl {
+  float: left;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+.base .base_cen .cen_two dl h3 {
+  font-size: 14px;
+  line-height: 40px;
+}
+.base .base_cen .cen_two dl dd {
+  font-size: 12px;
+  color: #999999;
+  line-height: 32px;
+}
+.base .base_cen .cen_two .gz {
+  margin-left: 90px;
+}
+.base .base_cen .cen_two .gz img {
+  float: left;
+}
+.base .base_cen .cen_three .list {
+  width: 720px;
+  height: 50px;
+  margin: 0 auto;
+}
+.base .base_cen .cen_three .list li {
+  float: left;
+  font-size: 12px;
+  color: #999999;
+  display: block;
+  width: 80px;
+  line-height: 50px;
+}
+.base .base_cen .cen_three .xs {
+  width: 880px;
+  height: 166px;
+  margin: 0 auto;
+}
+.base .base_cen .cen_three .xs p {
+  font-size: 12px;
+  color: #999999;
+  text-align: center;
+  line-height: 25px;
+}
+
+/*# sourceMappingURL=milk.css.map */

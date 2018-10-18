@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<div class="login">
+			<div class="login_left">
+				<img src="img/login/login1.png"/>
+				<img src="img/login/login3.jpg"/>
+			</div>
+			<div class="login_right">
+				<p>登录蜜芽</p>
+				<p><a href="register.html">还没有蜜芽账号？</a></p>
+				<p>30秒注册</p>
+				<div class="information">
+					<input type="text" name="uname"  placeholder="邮箱/手机号" class="uname kk" id="uname"/>
+					<input type="password" name="upwd" placeholder="密码" class="upwd kk" id="upwd"/>
+					<span>忘记密码？</span>
+					<input type="button"  value="登录" class="btn"  id="btn"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/cookie.js"></script>
+	<script type="text/javascript">
+		var brr = getCookie( "namelist" ) ;
+		//console.log( brr ) ;
+		$( "#btn" ).click( function( ){
+			for( var i = 0 ; i < brr.length ; i++ ){
+				var cookieName = brr[ i ].uname ;
+				var cookiePwd = brr[ i ].upwd ;			
+			}
+			var txtName = $id( "uname" ).value ;
+			var txtPwd = $id( "upwd" ).value ;
+			if( cookieName == txtName && cookiePwd == txtPwd ){
+				alert( "登陆成功" ) ;
+				location.href = "index.html" ;
+			}else if( cookieName != txtName ){
+				alert( "该用户名不存在，请先去注册" ) ;
+				location.href = "register.html" ;
+			}else if( cookieName == txtName && cookiePwd != txtPwd ){
+				alert( "密码错误" ) ;
+				location.href = "login.html" ;
+			}
+		})
+	</script>
+</html>
