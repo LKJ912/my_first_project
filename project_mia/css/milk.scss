@@ -125,7 +125,7 @@ img{
     width:43px;height:215px;position: fixed;bottom: 135px;right: 5px;font-size: 12px;border: 1px solid #E5E5E5; border-radius: 5px;background: #ffffff;display: none;
     ul{
         li{
-            display:block;text-align: -webkit-center;margin-top: 5px;cursor: pointer;
+            display:block;text-align: center;margin-top: 5px;cursor: pointer;
         }
         .b{
             border-top: 1px solid #E5E5E5;border-bottom: 1px solid #E5E5E5;
@@ -175,7 +175,7 @@ img{
             .cprice{
                 font-size: 18px;color: #ff4a49;text-indent: 15px;padding-top: 10px;padding-bottom: 5px;
                 button{
-                    width: 100px;height: 30px;border-radius: 15px;background: #ff4a49;font-size: 16px;color: #fffff3;border: 0;margin-left: 12px;
+                    width: 100px;height: 30px;border-radius: 15px;background: #ff4a49;font-size: 16px;color: #fffff3;border: 0;margin-left: 12px;outline: none;
                 }
             }
             p{

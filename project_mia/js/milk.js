@@ -1,3 +1,11 @@
+var $list = $( ".classify ul li" ) ;
+$list.each( function( index , value ){
+	$( value ).hover( function( ){
+		$( this ).css( "background-color" , "#ec0971" ) ;
+	} , function( ){
+		$( this ).css( "background-color" , "#ff3893" ) ;
+	})	
+})
 $( ".nav_bar" ).hover( function( ){
 	$( ".nav_bar" ).find( ".bar_left" ).show( ) ;
 } , function( ){

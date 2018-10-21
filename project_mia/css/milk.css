@@ -240,7 +240,7 @@ img {
 }
 .scroll_right ul li {
   display: block;
-  text-align: -webkit-center;
+  text-align: center;
   margin-top: 5px;
   cursor: pointer;
 }
@@ -354,6 +354,7 @@ img {
   color: #fffff3;
   border: 0;
   margin-left: 12px;
+  outline: none;
 }
 .details #deguo li p, .details #helan li p, .details #aierlan li p, .details #yingguo li p, .details #deguomm li p {
   border-right: 1px solid #e5e5e5;

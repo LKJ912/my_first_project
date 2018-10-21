@@ -28,7 +28,7 @@ if( brr.length != 0 ){
 var conStr = $( ".tab" ).html( ) ;
 for( var i = 0 ; i < brr.length ; i++ ){
 	var shopin = brr[ i ] ;
-	conStr += `<tr class="rows">
+	conStr += `<tr class="rows" data-id = "${shopin.id}">
 					<td><input type="checkbox" class="qx"/></td>
 					<td><img src="${shopin.src}"/><p>${shopin.name}</p></td>
 					<td>${shopin.price}</td>
@@ -43,17 +43,66 @@ $( "#qxAll" ).click(function( ){
 	$( ".qx" ).prop( "checked" , $( this ).prop( "checked" ) ) ;
 	jiesuan( ) ;
 })
-
+//单击复选框 
+$( ".qx" ).click( function( ){
+	jiesuan( ) ;
+})
 //结算函数
 function jiesuan( ){
 	var count = 0 ;
-	var money = "￥" ;
+	var money = 0 ;
 	$( ".qx:checked" ).each( function( ){
 		count += Number( $( this ).parent( ).parent( ).find( ".shop_count" ).html( ) ) ;
 		money += parseInt( $( this ).parent( ).parent( ).find( ".money" ).html( ) ) ;
-		console.log( $( ".money" ).html( ) ) ;
+		console.log( money ) ;
 	})
+	console.log( money ) ;
 	$( ".jsuan .ll" ).html( count ) ;
-	$( ".jsuan .lr" ).html( money ) ;
-	//console.log( money ) ;
+	$( ".jsuan .lr" ).html( "￥"+money ) ;
 }
+//加减功能
+$( ".number .numb" ).click( function( ){
+	var id = $( this ).parent( ).parent( ).data( "id" ) ;
+	var sign = $( this ).data( "num" ) ; //商品操作符 （ 加或减 ）
+	var count = $( this ).parent( ).find( ".shop_count" ).html( ) ;
+	if( sign == -1 && count == 1 ){
+		return ;
+	}
+	//根据  id 在 brr 中查找要操作的商品
+	for( var i = 0 ; i < brr.length ; i++ ){
+		if( id == brr[ i ].id ){
+			brr[ i ].count += sign ;
+			//页面商品数量
+			$( this ).parent( ).find( ".shop_count" ).html( brr[ i ].count ) ;
+			//页面单个商品的总金额
+			$( this ).parent( ).next( ).html( brr[ i ].count*brr[ i ].price ) ;
+			//将操作后的商品信息存入cookie
+			setCookie( "shoplist" , JSON.stringify( brr ) ) ;
+			jiesuan( ) ;
+			break ;
+		}
+	}
+})
+//删除操作
+$( ".del" ).click( function( ){
+	//找到对应的商品 id
+	var id = $( this ).parent( ).data( "id" ) ;
+	if( confirm( "确定要删除吗？" ) ){
+		//遍历商品数组 brr
+		for( var i = 0 ; i < brr.length ; i++ ){
+			if( id == brr[ i ].id ){
+				//删除数组中 下标为 i 的商品信息
+				brr.splice( i , 1 ) ;
+				//页面删除对应信息
+				$( this ).parent( ).remove( ) ;
+				//将删除后的商品信息  重新存入cookie
+				setCookie( "shoplist" , JSON.stringify( brr ) ) ;
+				break ;
+			}
+		}
+	}
+	if( brr.length == 0 ){
+		$( ".stuff" ).css( "display" , "block " ) ;
+		$( ".shop_box" ).css( "display" , "none" ) ;
+	}
+})
